@@ -12,13 +12,18 @@
 6. etc
 
 # How to Use?
-1. Migrate table using
-   <pre>php artisan migrate</pre>
-2. Running seeding for samples content table
-   <pre>php artisan db:seed</pre>
+1. Clone Repository
+2. install/update package composer
+   <pre>composer install</pre>
 3. Copy and replace file <b>.env.example</b> to <b>.env</b> and setting with your database
-4. Login using sample:<br /> user:<b>admin</b> and password: <b>admin</b>
-5. Now, you can create more sample user with roles, and create sample books
+4. generate key
+   <pre>php artisan key:generate</pre>
+5. Migrate table using
+   <pre>php artisan migrate</pre>
+6. Running seeding for samples content table
+   <pre>php artisan db:seed</pre>
+7. Login using sample:<br /> user:<b>admin</b> and password: <b>admin</b>
+8. Now, you can create more sample user with roles, and create sample books
     
 
 ## Official Documentation
