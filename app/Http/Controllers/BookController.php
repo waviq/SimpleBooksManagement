@@ -13,10 +13,13 @@ use Response;
 
 class BookController extends Controller
 {
+    /*
+     * Who can access for this method/route/url
+     */
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('role:admin');
+        $this->middleware('permission:crud_book',['except'=>['create','store']]);
     }
 
     /*
@@ -33,7 +36,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        return view('Book.create');
+        return view('Book.createBook');
     }
 
     /*
@@ -57,6 +60,14 @@ class BookController extends Controller
     public function postEditAuthor(Request $request)
     {
         return $this->editAuthorBook($request);
+    }
+
+    public function destroy($id){
+        $book = Book::findOrFail($id);
+        $book->delete();
+
+        alert()->success('Deleted');
+        return redirect(url(action('BookController@index')));
     }
 
 
@@ -83,16 +94,12 @@ class BookController extends Controller
         $book->title = Input::get('title');
         $book->author = Input::get('author');
         $book->photo_small = $findFileName;
-        $book->photo_small = $findFileName;
+        $book->photo_large = $findFileName;
         $book->save();
         alert()->success('Saved');
-        return redirect(url(action('BookController@create')));
+        return redirect(url(action('BookController@index')));
     }
 
-    /**
-     * @param Request $request
-     * @return \Illuminate\Http\JsonResponse
-     */
     private function editTitleBook(Request $request)
     {
         $id = $request->pk;
@@ -108,10 +115,6 @@ class BookController extends Controller
         }
     }
 
-    /**
-     * @param Request $request
-     * @return \Illuminate\Http\JsonResponse
-     */
     private function editAuthorBook(Request $request)
     {
         $id = $request->pk;

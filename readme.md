@@ -1,26 +1,37 @@
-# Laravel PHP Framework
+# Book Management Backend
+1. Using [Laravel](https://laravel.com/docs/5.2) Framework Version 5.2
+2. Using template [AdminLTE](https://almsaeedstudio.com/themes/AdminLTE/index2.html)
+3. etc
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+# Features
+1. ACL Management using [Entrust](https://github.com/Zizaco/entrust) implementation
+2. Image Manipulating using [Intervention](http://image.intervention.io/) Image implementation
+3. Slicing AdminLT [Intervention](http://image.intervention.io/) implementation
+4. Implementation [x-editable](https://vitalets.github.io/x-editable/) bootstrap
+5. Compressing all styles and script using [Gulp](http://gulpjs.com/) and [Elixir](https://laravel.com/docs/5.2/elixir)
+6. etc
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
-
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+# How to Use?
+1. Migrate table using
+   <pre>php artisan migrate</pre>
+2. Running seeding for samples content table
+   <pre>php artisan db:seed</pre>
+3. Copy and replace file <b>.env.example</b> to <b>.env</b> and setting with your database
+4. Login using sample:<br /> user:<b>admin</b> and password: <b>admin</b>
+5. Now, you can create more sample user with roles, and create sample books
+    
 
 ## Official Documentation
 
 Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
 
 ## Contributing
+1. [Waviq Subhi](https://mastahcode.com/profile/waviq)
+2. [Laravel documentation](http://laravel.com/docs/contributions).
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+## Questions
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+If you have questions or have jobs, email me on: waviq.subkhi@gmail.com
 
 ## License
 
