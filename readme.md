@@ -6,7 +6,7 @@
 # Features
 1. ACL Management using [Entrust](https://github.com/Zizaco/entrust) implementation
 2. Image Manipulating using [Intervention](http://image.intervention.io/) Image implementation
-3. Slicing AdminLT [Intervention](http://image.intervention.io/) implementation
+3. Slicing AdminLT [AdminLTE](https://almsaeedstudio.com/themes/AdminLTE/index2.html) implementation
 4. Implementation [x-editable](https://vitalets.github.io/x-editable/) bootstrap
 5. Compressing all styles and script using [Gulp](http://gulpjs.com/) and [Elixir](https://laravel.com/docs/5.2/elixir)
 6. etc
